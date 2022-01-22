@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <title>Paint List</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div>
+        <h1 class="display-4 text-center">
+          <i class="bi bi-brush"></i> Paints Inventory List
+        </h1>
+      </div>
+      <form class="paint-form">
+        <div class="mb-2">
+          <label for="color" class="form-label">Color</label>
+          <input
+            type="text"
+            class="form-control"
+            id="color"
+            placeholder="Example: Karak Stone"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="Brand" class="form-label">Brand</label>
+          <input
+            type="text"
+            class="form-control"
+            id="brand"
+            placeholder="Example: Citadel"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="Type" class="form-label">Type</label>
+          <input
+            type="text"
+            class="form-control"
+            id="type"
+            placeholder="Example: Base"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
