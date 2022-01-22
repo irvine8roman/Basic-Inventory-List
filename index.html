@@ -18,10 +18,10 @@
     <div class="container mt-4">
       <div>
         <h1 class="display-4 text-center">
-          <i class="bi bi-brush"></i> Paints Inventory List
+          <i class="bi bi-brush"></i> My Paint Inventory
         </h1>
       </div>
-      <form class="paint-form">
+      <form id="paints-form">
         <div class="mb-2">
           <label for="color" class="form-label">Color</label>
           <input
@@ -40,7 +40,7 @@
             placeholder="Example: Citadel"
           />
         </div>
-        <div class="mb-2">
+        <div class="mb-3">
           <label for="Type" class="form-label">Type</label>
           <input
             type="text"
@@ -49,7 +49,21 @@
             placeholder="Example: Base"
           />
         </div>
+        <div class="d-grid mb-2">
+          <button type="button" class="btn btn-primary" id="submit">
+            Update Inventory
+          </button>
+        </div>
       </form>
+      <table class="table table-striped">
+        <thead>
+          <th>Color</th>
+          <th>Brand</th>
+          <th>Type</th>
+          <th></th>
+        </thead>
+        <tbody id="paints-list"></tbody>
+      </table>
     </div>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
