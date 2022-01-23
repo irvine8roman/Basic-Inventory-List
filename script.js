@@ -22,6 +22,12 @@ class UI {
     `;
     document.querySelector("#paints-list").appendChild(row);
   }
+
+  static clearValues() {
+    document.querySelector("#color").value = "";
+    document.querySelector("#brand").value = "";
+    document.querySelector("#type").value = "";
+  }
 }
 
 document.querySelector("#submit").addEventListener("click", () => {
@@ -29,8 +35,21 @@ document.querySelector("#submit").addEventListener("click", () => {
   const brand = document.querySelector("#brand").value;
   const type = document.querySelector("#type").value;
 
-  const paint = new Paint(color, brand, type);
+  if (color === "" || brand === "" || type === "") {
+    alert("Please fill out all fields");
+  } else {
+    const paint = new Paint(color, brand, type);
 
-  //   UI.addPaintToInventory();
-  UI.addPaintToInventory(paint);
+    UI.addPaintToInventory(paint);
+
+    UI.clearValues();
+  }
+});
+
+document.querySelector("#paints-list").addEventListener("click", (e) => {
+  console.log(e);
+  console.log(e.target);
+  if (e.target.classList.contains("danger")) {
+    e.target.parentElement.parentElement.remove();
+  }
 });
